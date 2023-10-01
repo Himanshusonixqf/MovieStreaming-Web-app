@@ -1,46 +1,27 @@
- import styles from '@/app/styles/common.module.css'
-   import Image from "next/image";
- import Link from "next/link";
-
-
-import React from 'react'
-
-
-
+import styles from '@/app/styles/common.module.css'
+import Image from "next/image";
+import Link from "next/link";
 const MovieCard = (curElem) => {
 
-    const {score, show}= curElem;
+    const {id, type, title, synopsis} = curElem.jawSummary;
 
     return (
         <>
             <div className={styles.card}>
                 <div className={styles.card_image}>
-                <Image src={show.image.medium} alt={show.image.medium} width={60} height={20} />
-
+                    <Image src={curElem.jawSummary.backgroundImage.url} alt={title} width={260} height={200} />
                 </div>
                 <div className={styles.card_data}>
-                   <h1>{score}</h1>
-                  
-                   <h2>{show.id}</h2>
+                    <h2>{title.substring(0,18)}</h2>
                     <p>
-                        {`${show.name} ...`}
+                        {`${synopsis.substring(0,66)} ...`}
                     </p>
-                    <p>
-                        {`${show.summary} `}
-                    </p>
-                
 
-                    <Link href={show.url}>
-                        <button>
-                            go to the  More
-                        </button>
-                    </Link>  
-
-                    {/* <Link href={`/movie/${show.id}`}>
+                    <Link href={`/movie/${id}`}>
                         <button>
                             Read More
                         </button>
-                    </Link> */}
+                    </Link>
                 </div>
             </div>
 

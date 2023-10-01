@@ -1,6 +1,6 @@
 import React from 'react';
 import footerStyles from '@/app/styles/footer.module.css'
-// import { FaFacebookF, FaTwitter,FaInstagram,FaLinkedinIn,FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaTwitter,FaInstagram,FaLinkedinIn,FaYoutube, FaGit } from "react-icons/fa";
 import Link from "next/link";
 
 
@@ -17,15 +17,15 @@ const Footer = () => {
                     <div className={footerStyles.top}>
                         <div className={footerStyles['logo-details']}>
                             {/*<i className={footerStyles.fab fa-slack]></i>*/}
-                            <span className={footerStyles.logo_name}>Thapa Technical</span>
+                            <span className={footerStyles.logo_name}>Join with US..</span>
                         </div>
-                        {/* <div className={footerStyles[`media-icons`]}>
-                            <Link href="#"><i > <FaFacebookF/> </i></Link>
-                            <Link href="#"><i > <FaTwitter/> </i> </Link>
-                            <Link href="https://www.instagram.com/thapatechnical/" target="_blank"><i > <FaInstagram/>  </i></Link>
-                            <Link href="#"><i > <FaLinkedinIn /> </i></Link>
+                        <div className={footerStyles[`media-icons`]}>
+                            <Link href="https://github.com/Himanshusonixqf"><i > <FaGit/> </i> </Link>
+                            <Link href="https://www.linkedin.com/in/himanshu-soni-66a5011b9/"><i > <FaLinkedinIn /> </i></Link>
+                            <Link href="https://www.facebook.com/profile.php?id=100012665346149"><i > <FaFacebookF/> </i></Link>
+                            <Link href="https://www.instagram.com/13himanshu_soni/"><i > <FaInstagram/>  </i></Link>
                             <Link href="#"><i > <FaYoutube />  </i></Link>
-                        </div> */}
+                        </div>
                     </div>
                     <div className={footerStyles['link-boxes']}>
                         <ul className={footerStyles.box}>
